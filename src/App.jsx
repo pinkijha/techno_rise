@@ -1,10 +1,14 @@
+import Body from "./JobPost/components/Body"
+
 
 
 function App() {
 
   return (
     <>
-      <div>Hello</div>
+    <div>
+      <Body/>
+    </div>
     </>
   )
 }
