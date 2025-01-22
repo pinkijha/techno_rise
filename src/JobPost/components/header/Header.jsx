@@ -1,14 +1,33 @@
-import React from 'react'
-import MainHeader from './MainHeader'
-import SubHeader from './SubHeader'
+import React from 'react';
+import MainHeader from './MainHeader';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Dashboard from '../Dashboard';
+
+const Home = () => <h1>Home Page</h1>;
+const FindCandidate = () => <h1>Find Candidate</h1>;
+const MyJobs = () => <h1>My Jobs</h1>;
+const Applications = () => <h1>Applications</h1>;
+const CustomerSupports = () => <h1>Customer Supports</h1>;
 
 const Header = () => {
   return (
-    <div className='md:flex md:flex-col md:w-full shadow-sm'>
-      <MainHeader/>
-      <SubHeader/>
-    </div>
-  )
-}
+    <Router>
+      <div className="md:flex md:flex-col md:w-full shadow-sm">
+        {/* Header */}
+        <MainHeader />
 
-export default Header
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/find-candidate" element={<FindCandidate />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/my-jobs" element={<MyJobs />} />
+          <Route path="/applications" element={<Applications />} />
+          <Route path="/customer-supports" element={<CustomerSupports />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default Header;

@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './header/Header'
-import Sidebar from './Sidebar'
+import Dashboard from './Dashboard'
 
 const Body = () => {
   return (
     <div>
       <Header/>
-      <Sidebar/>    
+      <Dashboard/>   
     </div>
   )
 }
