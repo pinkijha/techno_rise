@@ -15,7 +15,7 @@ const Dashboard = () => {
       {/* Main Content */}
       <div className="flex flex-1">
         {/* Sidebar */}
-        <div className="md:w-1/4 bg-gray-200">
+        <div className="md:w-1/4 ">
           <Sidebar />
         </div>
         {/* Main Container */}
