@@ -1,12 +1,14 @@
 import React from "react";
 import { TbPhoneCall } from "react-icons/tb";
+import LanguageSelector from "../LanguageSelector";
 
 const MainHeader = () => {
   return (
-    <div className="flex justify-between">
+    <div className="bg-gray-100">
+      <div className="flex justify-between md:mx-[100px] ">
       {/* left side header */}
-      <div className="flex md:ml-[100px] md:p-2  ">
-        <ul className="flex space-x-5">
+      <div className="flex  md:p-2  ">
+        <ul className="flex space-x-5 text-gray-500">
           <li>Home</li>
           <li>Find Candidate</li>
           <li>Dashboard</li>
@@ -17,13 +19,16 @@ const MainHeader = () => {
       </div>
 
       {/* Right side Hedaer */}
+      <div className="flex space-x-4">
+      <div className="flex space-x-3 items-center md:p-2">
+      <TbPhoneCall  size={25} />
+      <p className="font-semibold  md:text-md">+1-202-555-0178</p>
+      </div>
       <div>
-      <div className="flex space-x-3 items-center md:text-lg md:p-2">
-      <TbPhoneCall className="md:text-xl " />
-      <p>+1-202-555-0178</p>
+        <LanguageSelector/>
       </div>
-      <div></div>
       </div>
+    </div>
     </div>
   );
 };

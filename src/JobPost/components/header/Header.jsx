@@ -4,7 +4,7 @@ import SubHeader from './SubHeader'
 
 const Header = () => {
   return (
-    <div className='md:flex md:flex-col md:w-full  md:p-2 shadow-xl'>
+    <div className='md:flex md:flex-col md:w-full shadow-sm'>
       <MainHeader/>
       <SubHeader/>
     </div>
