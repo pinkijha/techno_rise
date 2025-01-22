@@ -3,11 +3,11 @@ import MainHeader from './MainHeader';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Dashboard from '../Dashboard';
 
-const Home = () => <h1></h1>;
-const FindCandidate = () => <h1></h1>;
-const MyJobs = () => <h1></h1>;
-const Applications = () => <h1></h1>;
-const CustomerSupports = () => <h1></h1>;
+const Home = () => <h1>Home</h1>;
+const FindCandidate = () => <h1>FindCandidate</h1>;
+const MyJobs = () => <h1>MyJobs</h1>;
+const Applications = () => <h1>Applications</h1>;
+const CustomerSupports = () => <h1>CustomerSupports</h1>;
 
 const Header = () => {
   return (
