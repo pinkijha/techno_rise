@@ -4,10 +4,10 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Dashboard from '../Dashboard';
 
 const Home = () => <h1>Home Page</h1>;
-const FindCandidate = () => <h1>Find Candidate</h1>;
-const MyJobs = () => <h1>My Jobs</h1>;
-const Applications = () => <h1>Applications</h1>;
-const CustomerSupports = () => <h1>Customer Supports</h1>;
+const FindCandidate = () => <h1></h1>;
+const MyJobs = () => <h1></h1>;
+const Applications = () => <h1></h1>;
+const CustomerSupports = () => <h1></h1>;
 
 const Header = () => {
   return (

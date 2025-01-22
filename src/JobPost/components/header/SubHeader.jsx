@@ -16,7 +16,9 @@ const SubHeader = () => {
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/800px-Instagram_icon.png" alt="Logo" 
          className="md:h-12 rounded-full cursor-pointer mr-4" />
       </div>
+      <hr className='text-gray-600 ' />
     </div>
+    
   )
 }
 
