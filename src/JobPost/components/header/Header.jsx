@@ -1,7 +1,7 @@
 import React from 'react';
 import MainHeader from './MainHeader';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Dashboard from '../Dashboard';
+import Dashboard from '../Dashboard/Dashboard';
 
 const Home = () => <h1>Home</h1>;
 const FindCandidate = () => <h1>FindCandidate</h1>;

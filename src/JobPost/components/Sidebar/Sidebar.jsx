@@ -1,13 +1,13 @@
 import React from 'react';
-import { sidebarItem } from '../utils/constant';
+import { sidebarItem } from '../../utils/constant';
 
 
 const Sidebar = () => {
 
   return (
-    <div className="bg-gray-50 w-64 h-full shadow-md md:ml-[100px]">
+    <div className="bg-gray-50 min-w-72 h-full shadow-md md:ml-[100px]">
       <div className="p-4">
-        <h2 className="text-2xl font-bold text-gray-800">Employer Dashboard</h2>
+        <h2 className="text-xl font-bold text-gray-800">Employer Dashboard</h2>
       </div>
 
       <nav className="mt-6">
