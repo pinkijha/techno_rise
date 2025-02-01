@@ -1,53 +1,55 @@
-import { FaUser, FaBriefcase, FaMoneyCheckAlt, FaCogs, FaSignOutAlt } from "./icons";
-import { TiThMenu } from "react-icons/ti";
-
+import { GoStack, GoBriefcase, GoSignOut } from "react-icons/go";
+import { FaRegUserCircle } from "react-icons/fa";
+import { CiCirclePlus, CiBookmark } from "react-icons/ci";
+import { IoSettingsOutline } from "react-icons/io5";
+import { PiUserList,PiNotebookLight } from "react-icons/pi";
 
 export const sidebarItem = [
     {
         id: 1,
         name: 'Overview',
-        icon:  <TiThMenu/>,
+        icon:  <GoStack />,
     },
     {
         id: 2,
         name: 'Employer Profile',
-        icon: <FaUser  />,
+        icon: <FaRegUserCircle />,
     },
     {
         id: 3,
         name: 'Post a Job',
-        icon: <FaBriefcase  />,
+        icon: <CiCirclePlus />,
     },
     {
         id: 4,
         name: 'My Jobs',
-        icon: <FaMoneyCheckAlt  />,
+        icon: <GoBriefcase />,
     },
     {
         id: 5,
         name: 'Saved Candidates',
-        icon: <FaUser  />,
+        icon: <CiBookmark />,
     },
     {
         id: 6,
-        name: 'All Companies',
-        icon: <FaBriefcase  />,
+        name: 'Plans and Billing',
+        icon:   <PiNotebookLight />,
     },
     {
         id: 7,
-        name: 'Plans and Billing',
-        icon:   <FaCogs  />,
+        name: 'All Companies',
+        icon: <PiUserList />,
     },
     {
         id: 8,
         name: 'Settings',
-        icon:  <FaSignOutAlt  />,
+        icon:  <IoSettingsOutline />,
     },
-    {
-        id: 9,
-        name: 'Logout',
-        icon:  <FaSignOutAlt  />,
-    },
+    // {
+    //     id: 9,
+    //     name: 'Logout',
+    //     icon:  <GoSignOut />,
+    // },
 
 ]
 

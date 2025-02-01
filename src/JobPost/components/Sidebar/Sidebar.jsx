@@ -1,30 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { sidebarItem } from '../../utils/constant';
-
+import { GoSignOut } from "react-icons/go";
 
 const Sidebar = () => {
 
   return (
-    <div className="bg-gray-50 min-w-72 h-full shadow-md md:ml-[100px]">
-      <div className="p-4">
-        <h2 className="text-xl font-bold text-gray-800">Employer Dashboard</h2>
-      </div>
+    <div className="bg-gray-50 min-w-72 min-h-screen border-r-2 flex flex-col md:ml-[100px]">
+    {/* Header */}
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">Employer Dashboard</h2>
+    </div>
 
-      <nav className="mt-6">
-        <ul className="space-y-4">
-         
-          {sidebarItem.map(({id, name, icon}) => (
-            <>
-             <li key={id} className="flex items-center space-x-2 px-4 py-2 font-semibold
-              text-gray-500 hover:bg-blue-100 cursor-pointer">
-            {icon}
+    {/* Sidebar Items */}
+    <nav className="mt-6 flex-grow">
+      <ul className="flex flex-col">
+        {sidebarItem.map(({ id, name, icon }) => (
+          <li
+            key={id}
+            className="flex items-center space-x-4 px-4 py-2 text-[#767F8C] hover:bg-blue-100 cursor-pointer"
+          >
+            <p className="md:text-2xl">{icon}</p>
             <span>{name}</span>
           </li>
-            </>
-          ))}
-        </ul>
-      </nav>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Logout Button (Sticky at Bottom) */}
+    <div className="mt-auto">
+      <li
+        className="flex items-center space-x-4 px-4 py-2 text-[#767F8C] hover:bg-blue-100 cursor-pointer"
+      >
+        <p className="md:text-2xl">
+          <GoSignOut />
+        </p>
+        <span>Logout</span>
+      </li>
     </div>
+  </div>
   );
 };
 
