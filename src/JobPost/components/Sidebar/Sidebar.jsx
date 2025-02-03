@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { sidebarItem } from '../../utils/constant';
 import { GoSignOut } from "react-icons/go";
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
 
@@ -14,14 +15,14 @@ const Sidebar = () => {
     {/* Sidebar Items */}
     <nav className="mt-6 flex-grow">
       <ul className="flex flex-col">
-        {sidebarItem.map(({ id, name, icon }) => (
-          <li
+        {sidebarItem.map(({ id, name, icon, path }) => (
+          <NavLink to={path}
             key={id}
             className="flex items-center space-x-4 px-4 py-2 text-[#767F8C] hover:bg-blue-100 cursor-pointer"
           >
             <p className="md:text-2xl">{icon}</p>
             <span>{name}</span>
-          </li>
+          </NavLink>
         ))}
       </ul>
     </nav>
