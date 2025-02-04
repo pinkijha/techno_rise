@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./header/Header";
 import Sidebar from "./Sidebar/Sidebar";
+import Footer from "./Footer/Footer"
 
 const Body = ({ children }) => {
   return (
@@ -9,9 +10,9 @@ const Body = ({ children }) => {
       <Header />
 
       {/* Main Content Section */}
-      <div className="flex flex-1">
+      <div className="flex flex-1 ">
         {/* Sidebar */}
-        <div className="w-64 hidden md:block">
+        <div className="w-64 hidden md:flex">
           <Sidebar />
         </div>
 
@@ -20,6 +21,8 @@ const Body = ({ children }) => {
           <main className=" md:mx-[130px]">{children}</main>
         </div>
       </div>
+      {/* Footer */}
+      <Footer/>
     </div>
   );
 };
