@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import  { formats, modules } from './RichTextEditor';
 import ReactQuill from 'react-quill';
+import { FaLink } from "react-icons/fa6";
 
 const FoundingInfo = () => {
   const [companyVision, setCompanyVision] = useState("");
@@ -50,7 +51,7 @@ const FoundingInfo = () => {
         <div>
           <label className="block text-sm font-medium text-gray-600 md:mb-2">Company Website</label>
           <div className="flex items-center border rounded-md p-2">
-            <span className="text-gray-500 pr-2">🔗</span>
+            <span className="text-[#7900BA] pr-2"><FaLink /></span>
             <input
               type="text"
               placeholder="Website url..."
