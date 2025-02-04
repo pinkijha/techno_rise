@@ -2,9 +2,9 @@ import { Provider } from "react-redux";
 import Body from "./JobPost/components/Body";
 import store from "./JobPost/utils/redux/appStore";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Personal from "./JobPost/components/pages/settings/Personal";
 import Overview from "./JobPost/components/pages/Overview";
 import Dashboard from "./JobPost/components/Dashboard/Dashboard";
+import MainSetting from "./JobPost/components/pages/settings/MainSetting";
 
 const Home = () => <h1>Home</h1>;
 const FindCandidate = () => <h1>FindCandidate</h1>;
@@ -23,7 +23,7 @@ function App() {
               <Route path="/find-candidate" element={<FindCandidate />} />
               <Route path="/dashboard" element={<Dashboard />}>
                 <Route path="overview" element={<Overview />} />
-                <Route path="settings" element={<Personal />} />
+                <Route path="settings" element={<MainSetting/>} />
               </Route>
               <Route path="/my-jobs" element={<MyJobs />} />
               <Route path="/applications" element={<Applications />} />

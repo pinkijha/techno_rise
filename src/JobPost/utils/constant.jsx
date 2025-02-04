@@ -1,8 +1,13 @@
 import { GoStack, GoBriefcase, GoSignOut } from "react-icons/go";
 import { FaRegUserCircle } from "react-icons/fa";
-import { CiCirclePlus, CiBookmark } from "react-icons/ci";
+import { CiCirclePlus, CiBookmark, CiGlobe } from "react-icons/ci";
 import { IoSettingsOutline } from "react-icons/io5";
-import { PiUserList,PiNotebookLight } from "react-icons/pi";
+import { PiUserList, PiNotebookLight, PiGearSix } from "react-icons/pi";
+import { LuUserRound } from "react-icons/lu";
+import CompanyInfo from "../components/pages/settings/CompanyInfo";
+import FoundingInfo from "../components/pages/settings/FoundingInfo";
+import SocialMedia from "../components/pages/settings/SocialMedia";
+import AccountSetting from "../components/pages/settings/AccountSetting";
 
 export const sidebarItem = [
     {
@@ -61,3 +66,32 @@ export const sidebarItem = [
 
 ]
 
+
+// Setting Items for navigation
+export const settingNavItems = [
+    {
+        id: 1,
+        name: 'Company Info',
+        icon: <LuUserRound />,
+        component: <CompanyInfo/>,
+    },
+    {
+        id: 2,
+        name: 'Founding Info',
+        icon: <FaRegUserCircle />,
+        component: <FoundingInfo/>,
+
+    },
+    {
+        id: 3,
+        name: 'Social Media Profile', 
+        icon: <CiGlobe />,
+        component: <SocialMedia/>,
+    },
+    {
+        id: 4,
+        name: 'Accounting Setting',
+        icon: <PiGearSix />,
+        component: <AccountSetting/>,
+    },
+]

@@ -7,12 +7,12 @@ const Sidebar = () => {
   return (
     <div className="bg-gray-50 min-w-72 min-h-screen border-r-2 flex flex-col md:ml-[100px]">
       {/* Header */}
-      <div className="p-4">
+      <div className="p-2">
         <h2 className="text-xl font-bold text-gray-800">Employer Dashboard</h2>
       </div>
 
       {/* Sidebar Items */}
-      <nav className="mt-6 flex-grow">
+      <nav className="mt-4 flex-grow">
         <ul className="flex flex-col">
           {sidebarItem.map(({ id, name, icon, path }) => (
             <SidebarLink key={id} to={path} icon={icon} label={name} />
@@ -40,7 +40,7 @@ const SidebarLink = ({ to, icon, label }) => {
       to={to}
       className={({ isActive }) =>
         `flex items-center space-x-4 px-4 py-2 rounded ${
-          isActive ? "bg-blue-100 text-[#767F8C]" : "text-[#767F8C] hover:bg-blue-100"
+          isActive ? "bg-blue-100  border-l-4  border-[#7900BA] text-[#767F8C]" : "text-[#767F8C] hover:bg-blue-100"
         }`
       }
     >
