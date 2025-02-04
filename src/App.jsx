@@ -5,11 +5,12 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Overview from "./JobPost/components/pages/Overview";
 import Dashboard from "./JobPost/components/Dashboard/Dashboard";
 import MainSetting from "./JobPost/components/pages/settings/MainSetting";
+import Applications from "./JobPost/components/Applications"
 
 const Home = () => <h1>Home</h1>;
 const FindCandidate = () => <h1>FindCandidate</h1>;
 const MyJobs = () => <h1>MyJobs</h1>;
-const Applications = () => <h1>Applications</h1>;
+// const Applications = () => <h1>Applications</h1>;
 const CustomerSupports = () => <h1>CustomerSupports</h1>;
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
                 <Route path="settings" element={<MainSetting/>} />
               </Route>
               <Route path="/my-jobs" element={<MyJobs />} />
-              <Route path="/applications" element={<Applications />} />
+              <Route path="/applications" element={<Applications/>} />
               <Route path="/customer-supports" element={<CustomerSupports />} />
             </Routes>
           </Body>
