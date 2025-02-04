@@ -9,7 +9,7 @@ export const sidebarItem = [
         id: 1,
         name: 'Overview',
         icon:  <GoStack />,
-        path: '/overview',
+        path: '/dashboard/overview',
     },
     {
         id: 2,
@@ -51,7 +51,7 @@ export const sidebarItem = [
         id: 8,
         name: 'Settings',
         icon:  <IoSettingsOutline />,
-        path: '/settings',
+        path: '/dashboard/settings',
     },
     // {
     //     id: 9,
