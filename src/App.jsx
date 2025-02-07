@@ -6,6 +6,7 @@ import Overview from "./JobPost/components/pages/Overview";
 import Dashboard from "./JobPost/components/Dashboard/Dashboard";
 import MainSetting from "./JobPost/components/pages/settings/MainSetting";
 import Applications from "./JobPost/components/Applications"
+import ErrorPage from "./JobPost/components/pages/ErrorPage";
 
 const Home = () => <h1>Home</h1>;
 const FindCandidate = () => <h1>FindCandidate</h1>;
@@ -29,6 +30,7 @@ function App() {
               <Route path="/my-jobs" element={<MyJobs />} />
               <Route path="/applications" element={<Applications/>} />
               <Route path="/customer-supports" element={<CustomerSupports />} />
+              <Route path="/not-found" element={<ErrorPage/>} />
             </Routes>
           </Body>
         </Router>
