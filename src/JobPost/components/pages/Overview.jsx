@@ -3,10 +3,16 @@ import React, { useState } from "react";
 import { FaBriefcase,  FaEllipsisV } from "react-icons/fa";
 import { PiIdentificationCardLight } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FaRegCheckCircle } from "react-icons/fa";
+import { RxCrossCircled } from "react-icons/rx";
 
 
 const Overview = () => {
   const [menuOpen, setMenuOpen] = useState(null);
+
+  const menuToggle = () => {
+    setMenuOpen(!menuOpen);
+  }
 
   const jobs = [
     {
@@ -105,24 +111,26 @@ const Overview = () => {
                     {job.type} • {job.remaining}
                   </div>
                 </td>
-                <td className="p-4">
+                <td className="flex items-center p-4">
+                  {job.status === "Active" ? <FaRegCheckCircle className= "text-green-700" />  : <RxCrossCircled className="text-red-700" />}
+                
                   <span
                     className={`px-2 py-1 rounded-full text-xs ${
                       job.status === "Active"
-                        ? "bg-green-100 text-green-700"
-                        : "bg-red-100 text-red-700"
+                        ? "text-green-700" 
+                        : " text-red-700"
                     }`}
                   >
                     {job.status}
                   </span>
                 </td>
                 <td className="p-4">{job.applications} Applications</td>
-                <td className="p-4 flex items-center space-x-3 relative">
-                  <button className="bg-[#F1F2F4] hover:bg-[#7900BA] hover:text-white text-[#7900BA] px-4 py-2 rounded-md text-sm">
+                <td className="p-4 relative flex items-center space-x-3 ">
+                  <button className=" bg-[#F1F2F4] hover:bg-[#7900BA] hover:text-white text-[#7900BA] px-4 py-2 rounded-md text-sm">
                     View Applications
                   </button>
                   <button onClick={() => setMenuOpen(menuOpen === index ? null : index)}>
-                    <FaEllipsisV className="text-gray-600" />
+                    <FaEllipsisV className=" text-gray-600" />
                   </button>
 
                   {menuOpen === index && (
